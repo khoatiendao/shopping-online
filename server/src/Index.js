@@ -60,14 +60,14 @@ app.use('/api/customer', require('./api/customer.js'));
 // Deployment
 const path = require('path');
 
-app.use('/admin', express.static(path.resolve(__dirname, '../client-admin/client-admin-react/build')));
+app.use('/admin', express.static(path.resolve(__dirname, '../client-admin/build')));
 
 app.get('admin/*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client-admin/client-admin-react/build', 'index.html'))
+    res.sendFile(path.resolve(__dirname, '../client-admin/build', 'index.html'))
 });
 
-app.use('/', express.static(path.resolve(__dirname, '../client-customer/client-customer-react/build')));
+app.use('/', express.static(path.resolve(__dirname, '../client-customer/build')));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client-customer/client-customer-react/build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../client-customer/build', 'index.html'));
 });
