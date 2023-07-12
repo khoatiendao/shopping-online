@@ -5,7 +5,7 @@
   "main": "Index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "(npm install) && (cd ../client-admin/client-admin-react && npm install && npm run build) && (cd ../../client-customer/client-customer-react && npm install && npm run build)",
+    "build": "(npm install) && (cd ../client-admin && npm install && npm run build) && (cd ../client-customer && npm install && npm run build)",
     "start": "nodemon src/Index.js"
   },
   "repository": {
