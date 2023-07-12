@@ -1,5 +1,5 @@
-const mongooseutils = require('../utils/MongooseUtils');
-const models = require('../models/models');
+const mongooseutils = require('../utils/mongooseutils');
+const models = require('../models/Models');
 
 const CategoryDAO = {
     async selectAll() {
