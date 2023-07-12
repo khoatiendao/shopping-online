@@ -1,5 +1,5 @@
-const mongoose = require('../utils/MongooseUtils');
-const models = require('./models');
+const mongoose = require('../utils/mongooseutils');
+const models = require('./Models');
 
 const CustomerDAO = {
     async selectByUsernameOrEmail(username, email) {
